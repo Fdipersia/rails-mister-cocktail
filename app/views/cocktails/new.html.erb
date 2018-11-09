@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="text-align: center">
+      <h1>New Cocktail</h1>
+
+      <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.submit "Add a cocktail" %>
+      <% end %>
+      <div class="row">
+        <%= link_to root_path  do %>
+        <i class="fas fa-arrow-left" style= "font-size: 35px">Go baack</i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
