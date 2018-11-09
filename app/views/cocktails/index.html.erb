@@ -4,11 +4,12 @@
       <h1>Panchi's Cocktails</h1>
       <ul>
         <% @cocktails.each do |cocktail| %>
-        <li> <%= link_to cocktail.name, cocktail %> </li>
-        <% end %>
-      </ul>
+        <li><%= cl_image_tag cocktail.photo, height: 275, width: 150, crop: :fill %>
+         <%= link_to cocktail.name, cocktail %>  </li>
+         <% end %>
+       </ul>
 
-      <h3 class="btn btn-danger btn-lg"><%= link_to "Create a new Cocktail!", new_cocktail_path %></h3>
-    </div>
-  </div>
-</div>
+       <h3 class="btn btn-danger btn-lg"><%= link_to "Create a new Cocktail!", new_cocktail_path %></h3>
+     </div>
+   </div>
+ </div>
