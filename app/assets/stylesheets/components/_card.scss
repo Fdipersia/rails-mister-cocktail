@@ -1,0 +1,19 @@
+.card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  border-radius: 3px;
+  margin: 10px;
+  h2 {
+    padding: 10px;
+  }
+}
+
+// animation-name: scrollCards 35s infinite linear;
+//   animation-delay: 0s;
+//   animation-direction: normal;
+//   animation-fill-mode: none;
+//   animation-play-state: running;

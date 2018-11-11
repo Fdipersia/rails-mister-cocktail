@@ -1,14 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');">
+  <div class="banner-content">
+    <h1>PANCHI'S TABERN</h1>
+    <p>Let's get drunk</p>
+      <%= link_to "Create a new Cocktail", new_cocktail_path, class: "btn btn-lg" %>
+  </div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1>Panchi's Cocktails</h1>
-      <table>
-        <% @cocktails.each do |cocktail| %>
-        <tr><%= cl_image_tag cocktail.photo, height: 275, width: 150, crop: :fill %>
-         <%= link_to cocktail.name, cocktail %>  </tr>
-         <% end %>
-      </table>
-       <h3 class="btn btn-danger btn-lg"><%= link_to "Create a new Cocktail!", new_cocktail_path %></h3>
-     </div>
-   </div>
- </div>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to cocktail do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="card-description">
+              <h2><%= cocktail.name %></h2>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
